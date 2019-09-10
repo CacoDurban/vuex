@@ -35,6 +35,9 @@ const mutations = {
   decrementProductInventory (state, { id }) {
     const product = state.all.find(product => product.id === id)
     product.inventory--
+  },
+  addHijo(){
+    state.proyecto.hijos.push({nombre: "hijo1 perro"});
   }
 }
 

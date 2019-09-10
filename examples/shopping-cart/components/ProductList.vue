@@ -15,7 +15,7 @@
   </ul>
   <p v-text="proyecto"></p>
     <p v-text="proyecto.nombre"></p>
-    <button @click="cambiarNombreHijo()">Cambiar Nombre</button>
+    <button >Cambiar Nombre</button>
 </div>
 
 </template>
@@ -32,8 +32,9 @@ export default {
 
   methods: {
   ...mapActions('cart',['addProductToCart']),
+  ...mapMutations('products',['addHijo']),
   cambiarNombreHijo() {
-    this.$store.state.products.proyecto.hijos.push("perro");
+    this.$store.state.products.proyecto.hijos.push( {nombre: "hijo1"});
   }
 },
   created () {
