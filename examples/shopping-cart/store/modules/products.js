@@ -2,7 +2,8 @@ import shop from '../../api/shop'
 
 // initial state
 const state = {
-  all: []
+  all: [],
+  proyecto: {}
 }
 
 // getters
@@ -21,6 +22,14 @@ const actions = {
 const mutations = {
   setProducts (state, products) {
     state.all = products
+    state.proyecto = {
+      nombre: "carlos",
+      hijos: [
+        {nombre: "hijo1"},
+        {nombre: "hijo2"},
+        {nombre: "hijo3"}
+      ]
+    }
   },
 
   decrementProductInventory (state, { id }) {

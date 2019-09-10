@@ -3,6 +3,10 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
+const dd = {
+
+}
+
 // root state object.
 // each Vuex instance is just a single state tree.
 const state = {
